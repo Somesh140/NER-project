@@ -7,5 +7,6 @@ fastapi==0.78.0
 accelerate==0.5.1
 datasets==1.13.0
 Pyaml
+dataclasses==0.6
 ### local packages -
 -e . # << uncomment this to install from setup.py
