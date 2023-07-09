@@ -1,0 +1,658 @@
+[ 2023-07-09 16:40:21,120 ] ner.config.configuration - INFO - Reading Config file
+[ 2023-07-09 16:40:21,120 ] ner.config.configuration - ERROR - [Errno 2] No such file or directory: 'D:\\1_Datascience_projects\\NER-project\\config.yaml'
+Traceback (most recent call last):
+  File "d:\1_datascience_projects\ner-project\ner\config\configuration.py", line 18, in __init__
+    self.config = read_config(file_name=CONFIG_FILE_NAME)
+  File "d:\1_datascience_projects\ner-project\ner\utils\__init__.py", line 16, in read_config
+    with open(config_path) as config_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'D:\\1_Datascience_projects\\NER-project\\config.yaml'
+[ 2023-07-09 16:43:44,506 ] ner.config.configuration - INFO - Reading Config file
+[ 2023-07-09 16:43:44,511 ] ner.config.configuration - ERROR - while parsing a block mapping
+  in "D:\1_Datascience_projects\NER-project\configs\config.yaml", line 1, column 1
+expected <block end>, but found '<block mapping start>'
+  in "D:\1_Datascience_projects\NER-project\configs\config.yaml", line 21, column 3
+Traceback (most recent call last):
+  File "d:\1_datascience_projects\ner-project\ner\config\configuration.py", line 19, in __init__
+    self.config = read_config(file_name=file_name)
+  File "d:\1_datascience_projects\ner-project\ner\utils\__init__.py", line 17, in read_config
+    content = yaml.safe_load(config_file)
+  File "D:\1_Datascience_projects\NER-project\env\lib\site-packages\yaml\__init__.py", line 125, in safe_load
+    return load(stream, SafeLoader)
+  File "D:\1_Datascience_projects\NER-project\env\lib\site-packages\yaml\__init__.py", line 81, in load
+    return loader.get_single_data()
+  File "D:\1_Datascience_projects\NER-project\env\lib\site-packages\yaml\constructor.py", line 49, in get_single_data
+    node = self.get_single_node()
+  File "D:\1_Datascience_projects\NER-project\env\lib\site-packages\yaml\composer.py", line 36, in get_single_node
+    document = self.compose_document()
+  File "D:\1_Datascience_projects\NER-project\env\lib\site-packages\yaml\composer.py", line 55, in compose_document
+    node = self.compose_node(None, None)
+  File "D:\1_Datascience_projects\NER-project\env\lib\site-packages\yaml\composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "D:\1_Datascience_projects\NER-project\env\lib\site-packages\yaml\composer.py", line 127, in compose_mapping_node
+    while not self.check_event(MappingEndEvent):
+  File "D:\1_Datascience_projects\NER-project\env\lib\site-packages\yaml\parser.py", line 98, in check_event
+    self.current_event = self.state()
+  File "D:\1_Datascience_projects\NER-project\env\lib\site-packages\yaml\parser.py", line 438, in parse_block_mapping_key
+    raise ParserError("while parsing a block mapping", self.marks[-1],
+yaml.parser.ParserError: while parsing a block mapping
+  in "D:\1_Datascience_projects\NER-project\configs\config.yaml", line 1, column 1
+expected <block end>, but found '<block mapping start>'
+  in "D:\1_Datascience_projects\NER-project\configs\config.yaml", line 21, column 3
+[ 2023-07-09 16:48:12,253 ] ner.config.configuration - INFO - Reading Config file
+[ 2023-07-09 16:48:12,253 ] __main__ - INFO -  Data Ingestion Log Started 
+[ 2023-07-09 16:49:00,669 ] tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+[ 2023-07-09 16:49:00,779 ] h5py._conv - DEBUG - Creating converter from 7 to 5
+[ 2023-07-09 16:49:00,779 ] h5py._conv - DEBUG - Creating converter from 5 to 7
+[ 2023-07-09 16:49:00,779 ] h5py._conv - DEBUG - Creating converter from 7 to 5
+[ 2023-07-09 16:49:00,779 ] h5py._conv - DEBUG - Creating converter from 5 to 7
+[ 2023-07-09 16:49:01,893 ] ner.config.configuration - INFO - Reading Config file
+[ 2023-07-09 16:49:01,909 ] ner.component.data_ingestion - INFO -  Data Ingestion Log Started 
+[ 2023-07-09 16:49:01,909 ] ner.component.data_ingestion - INFO - Loading Data from Hugging face 
+[ 2023-07-09 16:49:01,909 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): s3.amazonaws.com:443
+[ 2023-07-09 16:49:03,065 ] urllib3.connectionpool - DEBUG - https://s3.amazonaws.com:443 "HEAD /datasets.huggingface.co/datasets/datasets/xtreme/xtreme.py HTTP/1.1" 200 0
+[ 2023-07-09 16:49:03,070 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): raw.githubusercontent.com:443
+[ 2023-07-09 16:49:03,627 ] urllib3.connectionpool - DEBUG - https://raw.githubusercontent.com:443 "HEAD /huggingface/datasets/1.13.0/datasets/xtreme/xtreme.py HTTP/1.1" 200 0
+[ 2023-07-09 16:49:03,627 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): raw.githubusercontent.com:443
+[ 2023-07-09 16:49:04,857 ] urllib3.connectionpool - DEBUG - https://raw.githubusercontent.com:443 "GET /huggingface/datasets/1.13.0/datasets/xtreme/xtreme.py HTTP/1.1" 200 9064
+[ 2023-07-09 16:49:04,880 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): raw.githubusercontent.com:443
+[ 2023-07-09 16:49:05,474 ] urllib3.connectionpool - DEBUG - https://raw.githubusercontent.com:443 "HEAD /huggingface/datasets/1.13.0/datasets/xtreme/dataset_infos.json HTTP/1.1" 200 0
+[ 2023-07-09 16:49:05,476 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): raw.githubusercontent.com:443
+[ 2023-07-09 16:49:05,673 ] urllib3.connectionpool - DEBUG - https://raw.githubusercontent.com:443 "GET /huggingface/datasets/1.13.0/datasets/xtreme/dataset_infos.json HTTP/1.1" 200 23078
+[ 2023-07-09 16:49:05,775 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): storage.googleapis.com:443
+[ 2023-07-09 16:49:07,993 ] urllib3.connectionpool - DEBUG - https://storage.googleapis.com:443 "HEAD /huggingface-nlp/cache/datasets/xtreme/PAN-X.en/1.0.0/dataset_info.json HTTP/1.1" 404 0
+[ 2023-07-09 16:49:07,993 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): s3.amazonaws.com:443
+[ 2023-07-09 16:49:09,091 ] urllib3.connectionpool - DEBUG - https://s3.amazonaws.com:443 "HEAD /datasets.huggingface.co/wikiann/1.1.0/panx_dataset.zip HTTP/1.1" 200 0
+[ 2023-07-09 16:49:09,095 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): s3.amazonaws.com:443
+[ 2023-07-09 16:49:10,341 ] urllib3.connectionpool - DEBUG - https://s3.amazonaws.com:443 "GET /datasets.huggingface.co/wikiann/1.1.0/panx_dataset.zip HTTP/1.1" 200 234008884
+[ 2023-07-09 16:51:21,617 ] ner.component.data_ingestion - INFO - Dataset Info : DatasetDict({
+    validation: Dataset({
+        features: ['tokens', 'ner_tags', 'langs'],
+        num_rows: 10000
+    })
+    test: Dataset({
+        features: ['tokens', 'ner_tags', 'langs'],
+        num_rows: 10000
+    })
+    train: Dataset({
+        features: ['tokens', 'ner_tags', 'langs'],
+        num_rows: 20000
+    })
+})
+[ 2023-07-09 16:51:21,617 ] __main__ - INFO -  Data Validation Started 
+[ 2023-07-09 16:51:21,617 ] __main__ - INFO -  Checks Initiated  
+[ 2023-07-09 16:51:21,617 ] __main__ - INFO -  Checking Columns of all the splits 
+[ 2023-07-09 16:51:25,722 ] __main__ - INFO -  Check Results [3, 3, 3]
+[ 2023-07-09 16:51:25,722 ] __main__ - INFO -  Checking type check of all the splits 
+[ 2023-07-09 16:51:25,722 ] __main__ - INFO -  Checking null check of all the splits 
+[ 2023-07-09 16:51:25,722 ] __main__ - INFO -  Checks Completed Result : [[True, True, True]]
+[ 2023-07-09 16:57:03,771 ] tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+[ 2023-07-09 16:57:03,885 ] h5py._conv - DEBUG - Creating converter from 7 to 5
+[ 2023-07-09 16:57:03,885 ] h5py._conv - DEBUG - Creating converter from 5 to 7
+[ 2023-07-09 16:57:03,885 ] h5py._conv - DEBUG - Creating converter from 7 to 5
+[ 2023-07-09 16:57:03,885 ] h5py._conv - DEBUG - Creating converter from 5 to 7
+[ 2023-07-09 16:57:43,530 ] ner.config.configuration - INFO - Reading Config file
+[ 2023-07-09 16:57:43,535 ] __main__ - INFO -  Running Data Ingestion pipeline 
+[ 2023-07-09 16:57:43,536 ] ner.component.data_ingestion - INFO -  Data Ingestion Log Started 
+[ 2023-07-09 16:57:43,536 ] ner.component.data_ingestion - INFO - Loading Data from Hugging face 
+[ 2023-07-09 16:57:43,538 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): s3.amazonaws.com:443
+[ 2023-07-09 16:57:45,888 ] urllib3.connectionpool - DEBUG - https://s3.amazonaws.com:443 "HEAD /datasets.huggingface.co/datasets/datasets/xtreme/xtreme.py HTTP/1.1" 200 0
+[ 2023-07-09 16:57:45,892 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): raw.githubusercontent.com:443
+[ 2023-07-09 16:57:46,463 ] urllib3.connectionpool - DEBUG - https://raw.githubusercontent.com:443 "HEAD /huggingface/datasets/1.13.0/datasets/xtreme/xtreme.py HTTP/1.1" 200 0
+[ 2023-07-09 16:57:46,467 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): raw.githubusercontent.com:443
+[ 2023-07-09 16:57:46,989 ] urllib3.connectionpool - DEBUG - https://raw.githubusercontent.com:443 "HEAD /huggingface/datasets/1.13.0/datasets/xtreme/dataset_infos.json HTTP/1.1" 200 0
+[ 2023-07-09 16:57:47,036 ] datasets.builder - WARNING - Reusing dataset xtreme (C:\Users\DELL\.cache\huggingface\datasets\xtreme\PAN-X.en\1.0.0\fb182342ff5c7a211ebf678cde070463acd29524b30b87f8f38c617948c2826a)
+[ 2023-07-09 16:57:47,051 ] ner.component.data_ingestion - INFO - Dataset Info : DatasetDict({
+    validation: Dataset({
+        features: ['tokens', 'ner_tags', 'langs'],
+        num_rows: 10000
+    })
+    test: Dataset({
+        features: ['tokens', 'ner_tags', 'langs'],
+        num_rows: 10000
+    })
+    train: Dataset({
+        features: ['tokens', 'ner_tags', 'langs'],
+        num_rows: 20000
+    })
+})
+[ 2023-07-09 16:57:47,051 ] __main__ - INFO -  Running Data validation Pipeline 
+[ 2023-07-09 16:57:47,051 ] ner.component.data_validation - INFO -  Data Validation Started 
+[ 2023-07-09 16:57:47,051 ] ner.component.data_validation - INFO -  Checks Initiated  
+[ 2023-07-09 16:57:47,051 ] ner.component.data_validation - INFO -  Checking Columns of all the splits 
+[ 2023-07-09 16:57:49,044 ] ner.component.data_validation - INFO -  Check Results [3, 3, 3]
+[ 2023-07-09 16:57:49,044 ] ner.component.data_validation - INFO -  Checking type check of all the splits 
+[ 2023-07-09 16:57:49,044 ] ner.component.data_validation - INFO -  Checking null check of all the splits 
+[ 2023-07-09 16:57:49,044 ] ner.component.data_validation - INFO -  Checks Completed Result : [[True, True, True]]
+[ 2023-07-09 16:57:49,044 ] __main__ - INFO - Checks Completed
+[ 2023-07-09 16:57:49,044 ] __main__ - INFO -  Running Data Preparation pipeline 
+[ 2023-07-09 16:57:49,044 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 16:57:50,065 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/tokenizer_config.json HTTP/1.1" 404 0
+[ 2023-07-09 16:57:50,071 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 16:57:50,938 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/config.json HTTP/1.1" 200 0
+[ 2023-07-09 16:57:50,938 ] filelock - DEBUG - Attempting to acquire lock 2163143750848 on C:\Users\DELL/.cache\huggingface\transformers\87683eb92ea383b0475fecf99970e950a03c9ff5e51648d6eee56fb754612465.dfaaaedc7c1c475302398f09706cbb21e23951b73c6e2b3162c1c8a99bb3b62a.lock
+[ 2023-07-09 16:57:50,938 ] filelock - DEBUG - Lock 2163143750848 acquired on C:\Users\DELL/.cache\huggingface\transformers\87683eb92ea383b0475fecf99970e950a03c9ff5e51648d6eee56fb754612465.dfaaaedc7c1c475302398f09706cbb21e23951b73c6e2b3162c1c8a99bb3b62a.lock
+[ 2023-07-09 16:57:50,938 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 16:57:51,786 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /xlm-roberta-base/resolve/main/config.json HTTP/1.1" 200 615
+[ 2023-07-09 16:57:51,800 ] filelock - DEBUG - Attempting to release lock 2163143750848 on C:\Users\DELL/.cache\huggingface\transformers\87683eb92ea383b0475fecf99970e950a03c9ff5e51648d6eee56fb754612465.dfaaaedc7c1c475302398f09706cbb21e23951b73c6e2b3162c1c8a99bb3b62a.lock
+[ 2023-07-09 16:57:51,800 ] filelock - DEBUG - Lock 2163143750848 released on C:\Users\DELL/.cache\huggingface\transformers\87683eb92ea383b0475fecf99970e950a03c9ff5e51648d6eee56fb754612465.dfaaaedc7c1c475302398f09706cbb21e23951b73c6e2b3162c1c8a99bb3b62a.lock
+[ 2023-07-09 16:57:51,805 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 16:57:52,338 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/xlm-roberta-base HTTP/1.1" 200 3463
+[ 2023-07-09 16:57:52,338 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 16:57:53,236 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/sentencepiece.bpe.model HTTP/1.1" 200 0
+[ 2023-07-09 16:57:53,236 ] filelock - DEBUG - Attempting to acquire lock 2163143363888 on C:\Users\DELL/.cache\huggingface\transformers\9df9ae4442348b73950203b63d1b8ed2d18eba68921872aee0c3a9d05b9673c6.00628a9eeb8baf4080d44a0abe9fe8057893de20c7cb6e6423cddbf452f7d4d8.lock
+[ 2023-07-09 16:57:53,236 ] filelock - DEBUG - Lock 2163143363888 acquired on C:\Users\DELL/.cache\huggingface\transformers\9df9ae4442348b73950203b63d1b8ed2d18eba68921872aee0c3a9d05b9673c6.00628a9eeb8baf4080d44a0abe9fe8057893de20c7cb6e6423cddbf452f7d4d8.lock
+[ 2023-07-09 16:57:53,236 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 16:57:55,095 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /xlm-roberta-base/resolve/main/sentencepiece.bpe.model HTTP/1.1" 200 5069051
+[ 2023-07-09 16:57:57,211 ] filelock - DEBUG - Attempting to release lock 2163143363888 on C:\Users\DELL/.cache\huggingface\transformers\9df9ae4442348b73950203b63d1b8ed2d18eba68921872aee0c3a9d05b9673c6.00628a9eeb8baf4080d44a0abe9fe8057893de20c7cb6e6423cddbf452f7d4d8.lock
+[ 2023-07-09 16:57:57,211 ] filelock - DEBUG - Lock 2163143363888 released on C:\Users\DELL/.cache\huggingface\transformers\9df9ae4442348b73950203b63d1b8ed2d18eba68921872aee0c3a9d05b9673c6.00628a9eeb8baf4080d44a0abe9fe8057893de20c7cb6e6423cddbf452f7d4d8.lock
+[ 2023-07-09 16:57:57,211 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 16:57:58,057 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/tokenizer.json HTTP/1.1" 200 0
+[ 2023-07-09 16:57:58,057 ] filelock - DEBUG - Attempting to acquire lock 2163144248864 on C:\Users\DELL/.cache\huggingface\transformers\daeda8d936162ca65fe6dd158ecce1d8cb56c17d89b78ab86be1558eaef1d76a.a984cf52fc87644bd4a2165f1e07e0ac880272c1e82d648b4674907056912bd7.lock
+[ 2023-07-09 16:57:58,057 ] filelock - DEBUG - Lock 2163144248864 acquired on C:\Users\DELL/.cache\huggingface\transformers\daeda8d936162ca65fe6dd158ecce1d8cb56c17d89b78ab86be1558eaef1d76a.a984cf52fc87644bd4a2165f1e07e0ac880272c1e82d648b4674907056912bd7.lock
+[ 2023-07-09 16:57:58,057 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 16:57:58,556 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /xlm-roberta-base/resolve/main/tokenizer.json HTTP/1.1" 200 9096718
+[ 2023-07-09 16:58:01,088 ] filelock - DEBUG - Attempting to release lock 2163144248864 on C:\Users\DELL/.cache\huggingface\transformers\daeda8d936162ca65fe6dd158ecce1d8cb56c17d89b78ab86be1558eaef1d76a.a984cf52fc87644bd4a2165f1e07e0ac880272c1e82d648b4674907056912bd7.lock
+[ 2023-07-09 16:58:01,088 ] filelock - DEBUG - Lock 2163144248864 released on C:\Users\DELL/.cache\huggingface\transformers\daeda8d936162ca65fe6dd158ecce1d8cb56c17d89b78ab86be1558eaef1d76a.a984cf52fc87644bd4a2165f1e07e0ac880272c1e82d648b4674907056912bd7.lock
+[ 2023-07-09 16:58:01,091 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 16:58:01,524 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/added_tokens.json HTTP/1.1" 404 0
+[ 2023-07-09 16:58:01,524 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 16:58:02,593 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/special_tokens_map.json HTTP/1.1" 404 0
+[ 2023-07-09 16:58:02,608 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 16:58:03,446 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/tokenizer_config.json HTTP/1.1" 404 0
+[ 2023-07-09 16:58:03,449 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 16:58:03,885 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/config.json HTTP/1.1" 200 0
+[ 2023-07-09 16:58:04,396 ] datasets.fingerprint - WARNING - Parameter 'function'=<function DataPreprocessing.create_tag_names at 0x000001F7E1013670> of the transform datasets.arrow_dataset.Dataset._map_single couldn't be hashed properly, a random hash was used instead. Make sure your transforms and parameters are serializable with pickle or dill for the dataset fingerprinting and caching to work. If you reuse this transform, the caching mechanism will consider it to be different from the previous calls and recompute everything. This warning is only showed once. Subsequent hashing failures won't be showed.
+[ 2023-07-09 16:58:06,863 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 16:58:06,927 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 16:58:06,991 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 16:58:07,043 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 16:58:07,097 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 16:58:07,150 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 16:58:07,200 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 16:58:07,254 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 16:58:07,311 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 16:58:07,439 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 16:58:07,511 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 16:58:07,568 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 16:58:07,620 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 16:58:07,674 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 16:58:07,723 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 16:58:07,785 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 16:58:07,841 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 16:58:07,898 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 16:58:07,949 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 16:58:08,001 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 16:58:08,058 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 16:58:08,116 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 16:58:08,171 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 16:58:08,223 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 16:58:08,374 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 16:58:08,427 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 16:58:08,482 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 16:58:08,535 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 16:58:08,589 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 16:58:08,643 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 16:58:08,697 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 16:58:08,751 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 16:58:08,803 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 16:58:08,858 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 16:58:08,915 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 16:58:08,968 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 16:58:09,019 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 16:58:09,072 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 16:58:09,212 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 16:58:09,260 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 16:58:09,425 ] __main__ - INFO - Preprocessed Data DatasetDict({
+    validation: Dataset({
+        features: ['attention_mask', 'input_ids', 'labels', 'ner_tags_str'],
+        num_rows: 10000
+    })
+    test: Dataset({
+        features: ['attention_mask', 'input_ids', 'labels', 'ner_tags_str'],
+        num_rows: 10000
+    })
+    train: Dataset({
+        features: ['attention_mask', 'input_ids', 'labels', 'ner_tags_str'],
+        num_rows: 20000
+    })
+})
+[ 2023-07-09 16:58:09,425 ] __main__ - INFO -  Run model Training 
+[ 2023-07-09 16:58:09,425 ] __main__ - ERROR - 'Configuration' object has no attribute 'get_model_train_pipeline_config'
+Traceback (most recent call last):
+  File "ner/pipeline/train_pipeline.py", line 52, in run_model_training
+    classifier = TrainTokenClassifier(model_training_config=self.config.get_model_train_pipeline_config(),
+AttributeError: 'Configuration' object has no attribute 'get_model_train_pipeline_config'
+[ 2023-07-09 17:20:28,015 ] tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+[ 2023-07-09 17:20:28,134 ] h5py._conv - DEBUG - Creating converter from 7 to 5
+[ 2023-07-09 17:20:28,134 ] h5py._conv - DEBUG - Creating converter from 5 to 7
+[ 2023-07-09 17:20:28,134 ] h5py._conv - DEBUG - Creating converter from 7 to 5
+[ 2023-07-09 17:20:28,134 ] h5py._conv - DEBUG - Creating converter from 5 to 7
+[ 2023-07-09 17:20:30,046 ] ner.config.configuration - INFO - Reading Config file
+[ 2023-07-09 17:20:30,050 ] __main__ - INFO -  Running Data Ingestion pipeline 
+[ 2023-07-09 17:20:30,051 ] ner.component.data_ingestion - INFO -  Data Ingestion Log Started 
+[ 2023-07-09 17:20:30,051 ] ner.component.data_ingestion - INFO - Loading Data from Hugging face 
+[ 2023-07-09 17:20:30,053 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): s3.amazonaws.com:443
+[ 2023-07-09 17:20:31,162 ] urllib3.connectionpool - DEBUG - https://s3.amazonaws.com:443 "HEAD /datasets.huggingface.co/datasets/datasets/xtreme/xtreme.py HTTP/1.1" 200 0
+[ 2023-07-09 17:20:31,166 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): raw.githubusercontent.com:443
+[ 2023-07-09 17:20:31,752 ] urllib3.connectionpool - DEBUG - https://raw.githubusercontent.com:443 "HEAD /huggingface/datasets/1.13.0/datasets/xtreme/xtreme.py HTTP/1.1" 200 0
+[ 2023-07-09 17:20:31,752 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): raw.githubusercontent.com:443
+[ 2023-07-09 17:20:32,369 ] urllib3.connectionpool - DEBUG - https://raw.githubusercontent.com:443 "HEAD /huggingface/datasets/1.13.0/datasets/xtreme/dataset_infos.json HTTP/1.1" 200 0
+[ 2023-07-09 17:20:32,403 ] datasets.builder - WARNING - Reusing dataset xtreme (C:\Users\DELL\.cache\huggingface\datasets\xtreme\PAN-X.en\1.0.0\fb182342ff5c7a211ebf678cde070463acd29524b30b87f8f38c617948c2826a)
+[ 2023-07-09 17:20:32,419 ] ner.component.data_ingestion - INFO - Dataset Info : DatasetDict({
+    validation: Dataset({
+        features: ['tokens', 'ner_tags', 'langs'],
+        num_rows: 10000
+    })
+    test: Dataset({
+        features: ['tokens', 'ner_tags', 'langs'],
+        num_rows: 10000
+    })
+    train: Dataset({
+        features: ['tokens', 'ner_tags', 'langs'],
+        num_rows: 20000
+    })
+})
+[ 2023-07-09 17:20:32,419 ] __main__ - INFO -  Running Data validation Pipeline 
+[ 2023-07-09 17:20:32,419 ] ner.component.data_validation - INFO -  Data Validation Started 
+[ 2023-07-09 17:20:32,419 ] ner.component.data_validation - INFO -  Checks Initiated  
+[ 2023-07-09 17:20:32,419 ] ner.component.data_validation - INFO -  Checking Columns of all the splits 
+[ 2023-07-09 17:20:34,518 ] ner.component.data_validation - INFO -  Check Results [3, 3, 3]
+[ 2023-07-09 17:20:34,518 ] ner.component.data_validation - INFO -  Checking type check of all the splits 
+[ 2023-07-09 17:20:34,518 ] ner.component.data_validation - INFO -  Checking null check of all the splits 
+[ 2023-07-09 17:20:34,518 ] ner.component.data_validation - INFO -  Checks Completed Result : [[True, True, True]]
+[ 2023-07-09 17:20:34,518 ] __main__ - INFO - Checks Completed
+[ 2023-07-09 17:20:34,518 ] __main__ - INFO -  Running Data Preparation pipeline 
+[ 2023-07-09 17:20:34,518 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:20:34,978 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/tokenizer_config.json HTTP/1.1" 404 0
+[ 2023-07-09 17:20:34,982 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:20:35,567 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/config.json HTTP/1.1" 200 0
+[ 2023-07-09 17:20:35,571 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:20:36,492 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/xlm-roberta-base HTTP/1.1" 200 3463
+[ 2023-07-09 17:20:36,496 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:20:36,970 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/sentencepiece.bpe.model HTTP/1.1" 200 0
+[ 2023-07-09 17:20:36,973 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:20:37,838 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/tokenizer.json HTTP/1.1" 200 0
+[ 2023-07-09 17:20:37,842 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:20:38,713 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/added_tokens.json HTTP/1.1" 404 0
+[ 2023-07-09 17:20:38,716 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:20:39,286 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/special_tokens_map.json HTTP/1.1" 404 0
+[ 2023-07-09 17:20:39,289 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:20:40,173 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/tokenizer_config.json HTTP/1.1" 404 0
+[ 2023-07-09 17:20:40,176 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:20:40,629 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/config.json HTTP/1.1" 200 0
+[ 2023-07-09 17:20:41,163 ] datasets.fingerprint - WARNING - Parameter 'function'=<function DataPreprocessing.create_tag_names at 0x00000134D754F940> of the transform datasets.arrow_dataset.Dataset._map_single couldn't be hashed properly, a random hash was used instead. Make sure your transforms and parameters are serializable with pickle or dill for the dataset fingerprinting and caching to work. If you reuse this transform, the caching mechanism will consider it to be different from the previous calls and recompute everything. This warning is only showed once. Subsequent hashing failures won't be showed.
+[ 2023-07-09 17:20:44,085 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 17:20:44,174 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 17:20:44,234 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 17:20:44,299 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 17:20:44,360 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 17:20:44,418 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 17:20:44,482 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 17:20:44,539 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 17:20:44,601 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 17:20:44,744 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 17:20:44,808 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 17:20:44,889 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 17:20:44,951 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 17:20:45,010 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 17:20:45,071 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 17:20:45,132 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 17:20:45,195 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 17:20:45,254 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 17:20:45,311 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 17:20:45,369 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 17:20:45,436 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 17:20:45,508 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 17:20:45,576 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 17:20:45,633 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 17:20:45,772 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 17:20:45,842 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 17:20:45,901 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 17:20:45,963 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 17:20:46,023 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 17:20:46,083 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 17:20:46,141 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 17:20:46,188 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 17:20:46,256 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 17:20:46,315 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 17:20:46,374 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 17:20:46,434 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 17:20:46,493 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 17:20:46,556 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 17:20:46,718 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 17:20:46,779 ] ner.component.data_preparation - INFO -  Tokenize and align labels 
+[ 2023-07-09 17:20:46,988 ] __main__ - INFO - Preprocessed Data DatasetDict({
+    validation: Dataset({
+        features: ['attention_mask', 'input_ids', 'labels', 'ner_tags_str'],
+        num_rows: 10000
+    })
+    test: Dataset({
+        features: ['attention_mask', 'input_ids', 'labels', 'ner_tags_str'],
+        num_rows: 10000
+    })
+    train: Dataset({
+        features: ['attention_mask', 'input_ids', 'labels', 'ner_tags_str'],
+        num_rows: 20000
+    })
+})
+[ 2023-07-09 17:20:46,988 ] __main__ - INFO -  Run model Training 
+[ 2023-07-09 17:20:46,991 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:20:48,009 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/tokenizer_config.json HTTP/1.1" 404 0
+[ 2023-07-09 17:20:48,012 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:20:49,031 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/config.json HTTP/1.1" 200 0
+[ 2023-07-09 17:20:49,047 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:20:49,884 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/xlm-roberta-base HTTP/1.1" 200 3463
+[ 2023-07-09 17:20:49,900 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:20:50,749 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/sentencepiece.bpe.model HTTP/1.1" 200 0
+[ 2023-07-09 17:20:50,753 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:20:51,598 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/tokenizer.json HTTP/1.1" 200 0
+[ 2023-07-09 17:20:51,614 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:20:52,090 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/added_tokens.json HTTP/1.1" 404 0
+[ 2023-07-09 17:20:52,090 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:20:52,527 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/special_tokens_map.json HTTP/1.1" 404 0
+[ 2023-07-09 17:20:52,527 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:20:53,382 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/tokenizer_config.json HTTP/1.1" 404 0
+[ 2023-07-09 17:20:53,382 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:20:54,244 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/config.json HTTP/1.1" 200 0
+[ 2023-07-09 17:20:54,689 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:20:55,561 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/config.json HTTP/1.1" 200 0
+[ 2023-07-09 17:20:55,564 ] ner.component.model_training - INFO -  Training Started 
+[ 2023-07-09 17:20:55,583 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:20:56,459 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+[ 2023-07-09 17:20:56,462 ] filelock - DEBUG - Attempting to acquire lock 1326506092240 on C:\Users\DELL/.cache\huggingface\transformers\97d0ea09f8074264957d062ec20ccb79af7b917d091add8261b26874daf51b5d.f42212747c1c27fcebaa0a89e2a83c38c6d3d4340f21922f892b88d882146ac2.lock
+[ 2023-07-09 17:20:56,462 ] filelock - DEBUG - Lock 1326506092240 acquired on C:\Users\DELL/.cache\huggingface\transformers\97d0ea09f8074264957d062ec20ccb79af7b917d091add8261b26874daf51b5d.f42212747c1c27fcebaa0a89e2a83c38c6d3d4340f21922f892b88d882146ac2.lock
+[ 2023-07-09 17:20:56,465 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): cdn-lfs.huggingface.co:443
+[ 2023-07-09 17:20:57,536 ] urllib3.connectionpool - DEBUG - https://cdn-lfs.huggingface.co:443 "GET /xlm-roberta-base/9d83baaafea92d36de26002c8135a427d55ee6fdc4faaa6e400be4c47724a07e?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1689157867&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTY4OTE1Nzg2N319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby94bG0tcm9iZXJ0YS1iYXNlLzlkODNiYWFhZmVhOTJkMzZkZTI2MDAyYzgxMzVhNDI3ZDU1ZWU2ZmRjNGZhYWE2ZTQwMGJlNGM0NzcyNGEwN2U~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qJnJlc3BvbnNlLWNvbnRlbnQtdHlwZT0qIn1dfQ__&Signature=wrecSpANsYKWo04EzcPwE7uOa4CKJ~MLszDwTMY2mBD~uJcnEVlcCk4b5UcePBOKTDdES~peVUj9vfxa0ep6I-KanTNsjKekqm~YgBKWzaMRf5UHhqt29ac28Z6SZy8nrr8xUX-29F3a4G6Ab8m48QxZUNycNJEYJn1xCGFVBdN25FhmHlT9P8An7n7r6nnITNwDc2Xd5lSFSLRHc0JDezr6nAZ0UDsvxAL3GDZCv9ZyA90bqOtv4yJDt5g7vhywwd9o~wV6DTJDJ3wT~HfUHKOroqFjX3EdygF1rzJxdOFchnw2wk0v4X9f6t-NBr2YDKoMUl0fj0v3riOYSPqALQ__&Key-Pair-Id=KVTP0A1DKRTAX HTTP/1.1" 200 1115590446
+[ 2023-07-09 17:24:11,879 ] filelock - DEBUG - Attempting to release lock 1326506092240 on C:\Users\DELL/.cache\huggingface\transformers\97d0ea09f8074264957d062ec20ccb79af7b917d091add8261b26874daf51b5d.f42212747c1c27fcebaa0a89e2a83c38c6d3d4340f21922f892b88d882146ac2.lock
+[ 2023-07-09 17:24:11,879 ] filelock - DEBUG - Lock 1326506092240 released on C:\Users\DELL/.cache\huggingface\transformers\97d0ea09f8074264957d062ec20ccb79af7b917d091add8261b26874daf51b5d.f42212747c1c27fcebaa0a89e2a83c38c6d3d4340f21922f892b88d882146ac2.lock
+[ 2023-07-09 17:24:12,300 ] ner.component.model_architecture - INFO - Model Initiated
+[ 2023-07-09 17:24:13,628 ] ner.component.model_training - INFO -  Training Running 
+[ 2023-07-09 17:24:13,628 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:24:14,472 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+[ 2023-07-09 17:24:15,425 ] ner.component.model_architecture - INFO - Model Initiated
+[ 2023-07-09 17:24:52,145 ] ner.component.model_training - INFO -  Result of the training TrainOutput(global_step=7, training_loss=1.6858528852462769, metrics={'train_runtime': 34.3458, 'train_samples_per_second': 2.912, 'train_steps_per_second': 0.204, 'train_loss': 1.6858528852462769, 'epoch': 1.0}) 
+[ 2023-07-09 17:24:54,199 ] ner.component.model_training - INFO -  Model Saved at [D:\1_Datascience_projects\NER-project\artifacts\model_weight]
+[ 2023-07-09 17:24:54,456 ] __main__ - INFO -  Training Completed 
+[ 2023-07-09 17:37:42,719 ] tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+[ 2023-07-09 17:37:42,934 ] h5py._conv - DEBUG - Creating converter from 7 to 5
+[ 2023-07-09 17:37:42,935 ] h5py._conv - DEBUG - Creating converter from 5 to 7
+[ 2023-07-09 17:37:42,935 ] h5py._conv - DEBUG - Creating converter from 7 to 5
+[ 2023-07-09 17:37:42,935 ] h5py._conv - DEBUG - Creating converter from 5 to 7
+[ 2023-07-09 17:37:44,684 ] ner.config.configuration - INFO - Reading Config file
+[ 2023-07-09 17:37:44,690 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:37:45,134 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/tokenizer_config.json HTTP/1.1" 404 0
+[ 2023-07-09 17:37:45,134 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:37:45,951 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/config.json HTTP/1.1" 200 0
+[ 2023-07-09 17:37:45,951 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:37:46,881 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/xlm-roberta-base HTTP/1.1" 200 3463
+[ 2023-07-09 17:37:46,885 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:37:47,282 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/sentencepiece.bpe.model HTTP/1.1" 200 0
+[ 2023-07-09 17:37:47,298 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:37:48,128 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/tokenizer.json HTTP/1.1" 200 0
+[ 2023-07-09 17:37:48,131 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:37:49,118 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/added_tokens.json HTTP/1.1" 404 0
+[ 2023-07-09 17:37:49,118 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:37:49,963 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/special_tokens_map.json HTTP/1.1" 404 0
+[ 2023-07-09 17:37:49,963 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:37:50,369 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/tokenizer_config.json HTTP/1.1" 404 0
+[ 2023-07-09 17:37:50,369 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:37:50,780 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/config.json HTTP/1.1" 200 0
+[ 2023-07-09 17:37:51,548 ] ner.component.model_architecture - INFO - Model Initiated
+[ 2023-07-09 17:43:37,334 ] tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+[ 2023-07-09 17:43:37,427 ] h5py._conv - DEBUG - Creating converter from 7 to 5
+[ 2023-07-09 17:43:37,427 ] h5py._conv - DEBUG - Creating converter from 5 to 7
+[ 2023-07-09 17:43:37,427 ] h5py._conv - DEBUG - Creating converter from 7 to 5
+[ 2023-07-09 17:43:37,427 ] h5py._conv - DEBUG - Creating converter from 5 to 7
+[ 2023-07-09 17:43:57,216 ] ner.config.configuration - INFO - Reading Config file
+[ 2023-07-09 17:43:57,232 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:43:57,664 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/tokenizer_config.json HTTP/1.1" 404 0
+[ 2023-07-09 17:43:57,667 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:43:58,563 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/config.json HTTP/1.1" 200 0
+[ 2023-07-09 17:43:58,563 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:43:59,053 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/xlm-roberta-base HTTP/1.1" 200 3463
+[ 2023-07-09 17:43:59,053 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:43:59,944 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/sentencepiece.bpe.model HTTP/1.1" 200 0
+[ 2023-07-09 17:43:59,947 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:44:00,795 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/tokenizer.json HTTP/1.1" 200 0
+[ 2023-07-09 17:44:00,795 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:44:01,620 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/added_tokens.json HTTP/1.1" 404 0
+[ 2023-07-09 17:44:01,625 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:44:02,456 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/special_tokens_map.json HTTP/1.1" 404 0
+[ 2023-07-09 17:44:02,456 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:44:02,950 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/tokenizer_config.json HTTP/1.1" 404 0
+[ 2023-07-09 17:44:02,953 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:44:03,883 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/config.json HTTP/1.1" 200 0
+[ 2023-07-09 17:44:04,638 ] ner.component.model_architecture - INFO - Model Initiated
+[ 2023-07-09 17:44:07,990 ] tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+[ 2023-07-09 17:44:08,096 ] h5py._conv - DEBUG - Creating converter from 7 to 5
+[ 2023-07-09 17:44:08,096 ] h5py._conv - DEBUG - Creating converter from 5 to 7
+[ 2023-07-09 17:44:08,096 ] h5py._conv - DEBUG - Creating converter from 7 to 5
+[ 2023-07-09 17:44:08,096 ] h5py._conv - DEBUG - Creating converter from 5 to 7
+[ 2023-07-09 17:44:09,195 ] ner.config.configuration - INFO - Reading Config file
+[ 2023-07-09 17:44:09,200 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:44:09,652 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/tokenizer_config.json HTTP/1.1" 404 0
+[ 2023-07-09 17:44:09,655 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:44:10,460 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/config.json HTTP/1.1" 200 0
+[ 2023-07-09 17:44:10,476 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:44:11,426 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/xlm-roberta-base HTTP/1.1" 200 3463
+[ 2023-07-09 17:44:11,429 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:44:12,262 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/sentencepiece.bpe.model HTTP/1.1" 200 0
+[ 2023-07-09 17:44:12,262 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:44:13,215 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/tokenizer.json HTTP/1.1" 200 0
+[ 2023-07-09 17:44:13,215 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:44:14,138 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/added_tokens.json HTTP/1.1" 404 0
+[ 2023-07-09 17:44:14,154 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:44:15,052 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/special_tokens_map.json HTTP/1.1" 404 0
+[ 2023-07-09 17:44:15,055 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:44:15,940 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/tokenizer_config.json HTTP/1.1" 404 0
+[ 2023-07-09 17:44:15,940 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:44:16,384 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/config.json HTTP/1.1" 200 0
+[ 2023-07-09 17:44:17,168 ] ner.component.model_architecture - INFO - Model Initiated
+[ 2023-07-09 17:44:18,534 ] asyncio - DEBUG - Using selector: SelectSelector
+[ 2023-07-09 17:44:18,613 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:18,992 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:19,370 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:19,750 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:20,139 ] watchfiles.main - DEBUG - 2 changes detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt'), (<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\env\\Lib\\site-packages\\httptools\\parser\\url_parser.cp38-win_amd64.pyd')}
+[ 2023-07-09 17:44:20,517 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:20,700 ] ner.config.configuration - INFO - Reading Config file
+[ 2023-07-09 17:44:20,724 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:44:20,898 ] watchfiles.main - DEBUG - 6 changes detected: {(<Change.added: 1>, 'D:\\1_Datascience_projects\\NER-project\\__pycache__'), (<Change.deleted: 3>, 'D:\\1_Datascience_projects\\NER-project\\__pycache__\\app.cpython-38.pyc.2301413718192'), (<Change.added: 1>, 'D:\\1_Datascience_projects\\NER-project\\__pycache__\\app.cpython-38.pyc'), (<Change.added: 1>, 'D:\\1_Datascience_projects\\NER-project\\__pycache__\\app.cpython-38.pyc.2301413718192'), (<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt'), (<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\env\\Lib\\site-packages\\websockets\\speedups.cp38-win_amd64.pyd')}
+[ 2023-07-09 17:44:21,286 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:21,573 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/tokenizer_config.json HTTP/1.1" 404 0
+[ 2023-07-09 17:44:21,576 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:44:21,663 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:22,014 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/config.json HTTP/1.1" 200 0
+[ 2023-07-09 17:44:22,014 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:44:22,045 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:22,420 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:22,816 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:22,926 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/xlm-roberta-base HTTP/1.1" 200 3463
+[ 2023-07-09 17:44:22,930 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:44:23,171 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:23,550 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:23,777 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/sentencepiece.bpe.model HTTP/1.1" 200 0
+[ 2023-07-09 17:44:23,781 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:44:23,927 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:24,318 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:24,625 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/tokenizer.json HTTP/1.1" 200 0
+[ 2023-07-09 17:44:24,633 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:44:24,709 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:25,082 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:25,460 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:25,835 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:25,835 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/added_tokens.json HTTP/1.1" 404 0
+[ 2023-07-09 17:44:25,835 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:44:26,221 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:26,596 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:26,971 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:26,987 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/special_tokens_map.json HTTP/1.1" 404 0
+[ 2023-07-09 17:44:27,003 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:44:27,346 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:27,733 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:28,112 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:28,186 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/tokenizer_config.json HTTP/1.1" 404 0
+[ 2023-07-09 17:44:28,195 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:44:28,493 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:28,874 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:29,264 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:29,361 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/config.json HTTP/1.1" 200 0
+[ 2023-07-09 17:44:29,643 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:30,018 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:30,401 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:30,783 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:31,095 ] ner.component.model_architecture - INFO - Model Initiated
+[ 2023-07-09 17:44:31,169 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:31,553 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:31,922 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:32,298 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:32,680 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:33,060 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:33,447 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:33,823 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:34,204 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:34,612 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:34,990 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:35,369 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:35,754 ] watchfiles.main - DEBUG - 2 changes detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt'), (<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\.git\\FETCH_HEAD')}
+[ 2023-07-09 17:44:36,195 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:36,638 ] watchfiles.main - DEBUG - 4 changes detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt'), (<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\.git\\FETCH_HEAD'), (<Change.deleted: 3>, 'D:\\1_Datascience_projects\\NER-project\\.git\\objects\\maintenance.lock'), (<Change.added: 1>, 'D:\\1_Datascience_projects\\NER-project\\.git\\objects\\maintenance.lock')}
+[ 2023-07-09 17:44:37,451 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:37,826 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:38,216 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:38,607 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:38,982 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:39,366 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:39,743 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:40,134 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:40,524 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:40,899 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:41,276 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:41,662 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:42,047 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:42,440 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:42,830 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:43,212 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:43,595 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:43,979 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:44,358 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:44,747 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:45,132 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:45,508 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:45,891 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:46,283 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:46,674 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:47,064 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:47,451 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:47,843 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:48,231 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:48,613 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:48,998 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:49,386 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:49,776 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:50,166 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:50,532 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:50,915 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:51,283 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:51,666 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:52,050 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:52,431 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:52,811 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:53,197 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:53,576 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:53,965 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:54,344 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:54,727 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:55,128 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:55,518 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:55,883 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:56,283 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:56,661 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:57,048 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:57,437 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:57,823 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:58,207 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:58,591 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:58,973 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:59,358 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:44:59,743 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:45:00,128 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:45:00,517 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:45:00,898 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:45:01,282 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:45:01,664 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:45:02,055 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:45:02,442 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:45:02,830 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:45:03,216 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:45:03,616 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:45:04,016 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:45:04,402 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:45:04,786 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:45:05,173 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:45:05,555 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:45:05,940 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:45:06,317 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:45:06,707 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:45:07,093 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:45:07,477 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:45:07,848 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:45:08,214 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:45:08,597 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:45:08,983 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:45:09,367 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:45:09,757 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:45:10,136 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:45:10,522 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:45:10,907 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:45:11,293 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:45:11,665 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:45:12,041 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:45:12,410 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:45:12,796 ] watchfiles.main - DEBUG - 1 change detected: {(<Change.modified: 2>, 'D:\\1_Datascience_projects\\NER-project\\artifacts\\logs\\logs.txt')}
+[ 2023-07-09 17:46:30,729 ] tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+[ 2023-07-09 17:46:30,885 ] h5py._conv - DEBUG - Creating converter from 7 to 5
+[ 2023-07-09 17:46:30,885 ] h5py._conv - DEBUG - Creating converter from 5 to 7
+[ 2023-07-09 17:46:30,885 ] h5py._conv - DEBUG - Creating converter from 7 to 5
+[ 2023-07-09 17:46:30,885 ] h5py._conv - DEBUG - Creating converter from 5 to 7
+[ 2023-07-09 17:46:32,437 ] ner.config.configuration - INFO - Reading Config file
+[ 2023-07-09 17:46:32,437 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:46:33,332 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/tokenizer_config.json HTTP/1.1" 404 0
+[ 2023-07-09 17:46:33,332 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:46:34,163 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/config.json HTTP/1.1" 200 0
+[ 2023-07-09 17:46:34,179 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:46:35,480 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/xlm-roberta-base HTTP/1.1" 200 3463
+[ 2023-07-09 17:46:35,480 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:46:36,624 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/sentencepiece.bpe.model HTTP/1.1" 200 0
+[ 2023-07-09 17:46:36,624 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:46:37,488 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/tokenizer.json HTTP/1.1" 200 0
+[ 2023-07-09 17:46:37,488 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:46:38,301 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/added_tokens.json HTTP/1.1" 404 0
+[ 2023-07-09 17:46:38,301 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:46:38,914 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/special_tokens_map.json HTTP/1.1" 404 0
+[ 2023-07-09 17:46:38,914 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:46:39,950 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/tokenizer_config.json HTTP/1.1" 404 0
+[ 2023-07-09 17:46:39,950 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:46:40,765 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/config.json HTTP/1.1" 200 0
+[ 2023-07-09 17:46:41,689 ] ner.component.model_architecture - INFO - Model Initiated
+[ 2023-07-09 17:46:42,834 ] asyncio - DEBUG - Using proactor: IocpProactor
+[ 2023-07-09 17:46:42,990 ] ner.config.configuration - INFO - Reading Config file
+[ 2023-07-09 17:46:43,006 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:46:43,869 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/tokenizer_config.json HTTP/1.1" 404 0
+[ 2023-07-09 17:46:43,869 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:46:44,764 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/config.json HTTP/1.1" 200 0
+[ 2023-07-09 17:46:44,780 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:46:45,703 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "GET /api/models/xlm-roberta-base HTTP/1.1" 200 3463
+[ 2023-07-09 17:46:45,703 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:46:46,126 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/sentencepiece.bpe.model HTTP/1.1" 200 0
+[ 2023-07-09 17:46:46,126 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:46:46,959 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/tokenizer.json HTTP/1.1" 200 0
+[ 2023-07-09 17:46:46,959 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:46:47,820 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/added_tokens.json HTTP/1.1" 404 0
+[ 2023-07-09 17:46:47,820 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:46:48,243 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/special_tokens_map.json HTTP/1.1" 404 0
+[ 2023-07-09 17:46:48,243 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:46:49,076 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/tokenizer_config.json HTTP/1.1" 404 0
+[ 2023-07-09 17:46:49,076 ] urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+[ 2023-07-09 17:46:49,915 ] urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /xlm-roberta-base/resolve/main/config.json HTTP/1.1" 200 0
+[ 2023-07-09 17:46:50,644 ] ner.component.model_architecture - INFO - Model Initiated
